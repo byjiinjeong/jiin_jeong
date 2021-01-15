@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+@keyframes anime{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+body{
+    position:relative;
+    animation: anime 1s linear;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+/* load */
+.loading{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:white;
+    z-index: 30;
+    display:flex;
+    opacity: 1;
+    transition: 1s;
+}
+
+.load-wrap{
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    height: 5rem;
+    background:white;
+    display:flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.load-wrap div{
+    width:100%;
+    height:0.2rem;
+    background: black;
+    transform: translateX(-100%);
+    animation: loading 5s linear forwards 1s;
+}
+
+.loadText{
+    position: absolute;
+    top:74%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    opacity: 0;
+    animation: loadText 1s ease-in-out forwards ;
+}
+
+@keyframes loading{
+    0%{
+        transform: translateX(-100%); 
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes loadText{
+    0%{
+        opacity: 0;
+        top: 77%;
+    }
+
+    100%{
+        opacity: 1;
+        top:74%;
+    }
+}
+
+
+
+/* header */
+
+.header-wrap{
+    width:100%;
+    height:100vh;
+    background: white;
+    /* display: flex;
+    align-items: center;
+    padding: 0 0 0 30rem; */
+    position: relative;
+}
+
+.headerText{
+    position: absolute;
+    top:30%;
+    left:10%;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.headerText > h2{
+    font-size: 9rem;
+    font-weight: 700;
+}
+
+.headerText > p{
+    font-size: 2rem;
+    font-weight: 500;
+    color:#555;
+    width: 40rem;
+}
+
+.headerUx{
+    display:flex;
+    padding-top: 3rem;
+}
+
+.headerUx > li{ 
+    margin-right: 2rem;
+}
+.headerUx > li > a{
+    font-weight: 600;
+    font-size: 1.5rem;
+    /* width:10rem; */
+    color:black;  
+    
+}
+.ef{
+    padding:1.2rem 0;
+    width:15rem;
+    background:white;
+    border: 2px solid black;
+    text-align: center;
+    
+}
+
+.headerUx > li > a:hover .ef{
+    background:black;
+    transition: 0.3s ease-in-out; 
+}
+.headerUx > li > a:hover{
+    color:white;
+    transition: 0.3s ease-in-out;  
+}
+
+.headerDown{
+    position: absolute;
+    left:50%;
+    bottom:2rem;
+    transform: translateX(-50%);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.headerDown div{
+    text-align: center;
+    font-size: 1.3rem;
+    color:#555;
+}
+
+/* main */
+
